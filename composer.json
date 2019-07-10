@@ -1,10 +1,10 @@
 {
-    "name": "laravel/laravel",
+    "name": "fint/todos",
     "type": "project",
-    "description": "The Laravel Framework.",
+    "description": "FinT-Backend-Coding-Challenge",
     "keywords": [
-        "framework",
-        "laravel"
+        "todo",
+        "items"
     ],
     "license": "MIT",
     "require": {
