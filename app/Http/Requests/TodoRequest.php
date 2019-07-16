@@ -8,7 +8,6 @@ class TodoRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
-     *
      * @return bool
      */
     public function authorize()
@@ -18,14 +17,19 @@ class TodoRequest extends FormRequest
 
     /**
      * Get the validation rules that apply to the request.
-     *
      * @return array
      */
     public function rules()
     {
         return [
-            'name' => 'bail|required|string|min:2|max:99|unique:todos',
-            'status' => 'bail|string|in:incomplete,complete'
+            'name'   => [
+                'bail',
+                'string',
+                'min:2',
+                'max:99',
+                $this->isMethod('create') ?: 'unique:todos',
+            ],
+            'status' => 'bail|string|in:incomplete,complete',
         ];
     }
 }
