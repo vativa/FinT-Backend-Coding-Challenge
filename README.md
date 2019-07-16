@@ -6,7 +6,7 @@ This project has the goal to expose TODO items functionality via an API to brows
 
 ### Features and specifications
 - storing TODO items in a relational database system (MySQL)
-- every TODO record consists of name and status entries
+- every TODO record consists of *name* and *status* entries
 - the server expose RESTful endpoints to handle TODO items
 - all of the functions involved in the process are being unit tested
 

@@ -1,7 +1,5 @@
 <?php
 
-use Illuminate\Http\Request;
-
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -13,4 +11,8 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::get('/test', 'Auth\LoginController@test');//->middleware(['auth:api']);
+Route::get('/todos', 'TodoController@index');// List
+Route::post('/todos', 'TodoController@store');// Create
+Route::get('/todos/{todo}', 'TodoController@show');// Read
+Route::put('/todos/{todo}', 'TodoController@update');// Update
+Route::delete('/todos/{todo}', 'TodoController@destroy');// Delete
