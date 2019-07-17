@@ -28,7 +28,7 @@ class TodoApiTest extends TestCase
      */
     public function testReadTodo(int $id)
     {
-        $response = $this->json('GET', "http://FinT-Backend-Coding-Challenge.mw/api/todos/$id");
+        $response = $this->json('GET', "http://FinT-Backend-Coding-Challenge.mw/api/todos/{$id}");
         $response->assertStatus(200);
     }
 
